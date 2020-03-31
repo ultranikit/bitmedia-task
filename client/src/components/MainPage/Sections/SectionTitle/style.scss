@@ -1,0 +1,24 @@
+.section-wrap {
+    margin-bottom: 40px;
+
+    text-align: center;
+    &__title {
+        line-height: 39px;
+        font-size: 32px;
+        font-weight: bold;
+        width: 60%;
+        margin: 0 auto;
+    }
+
+    &__thin-title {
+        font-weight: normal;
+    }
+
+    &__description {
+        margin: 25px auto 0;
+        width: 80%;
+        font-size: 20px;
+        color: #7e7e7e;
+        line-height: 142%;
+    }
+}

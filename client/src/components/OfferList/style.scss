@@ -1,0 +1,10 @@
+.offer-container {
+    display: flex;
+}
+
+@media screen and (max-width: 1280px) {
+    .offer-container {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}

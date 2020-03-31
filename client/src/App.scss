@@ -1,0 +1,17 @@
+@import './reset.css';
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,700&display=swap');
+
+a {
+    text-decoration: none;
+}
+
+.App {
+    font-family: 'Montserrat', sans-serif;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 130px;
+}

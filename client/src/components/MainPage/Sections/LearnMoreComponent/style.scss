@@ -1,0 +1,158 @@
+.learn-more-no-wave {
+    position: relative;
+    margin: 80px 0;
+    background: linear-gradient(93.19deg, #255d8b 2.29%, #3a80ba 96.79%);
+}
+
+.learn-more {
+    position: relative;
+    min-height: 48vw;
+
+    &:before {
+        position: absolute;
+        content: '';
+        top: -165px;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        background: url('./wave2.svg') no-repeat;
+        background-size: cover;
+        z-index: -1;
+    }
+
+    &__content {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+
+        &__image-wrap {
+            position: relative;
+            width: 600px;
+
+            &__picture {
+                position: absolute;
+                top: -29px;
+                bottom: 0;
+                height: 108%;
+                width: 100%;
+            }
+        }
+
+        &__description-wrap {
+            max-width: 586px;
+            color: #fff;
+            font-size: 48px;
+            padding: 70px 0;
+
+            &__title {
+                line-height: 59px;
+                font-weight: bold;
+            }
+
+            &__title-mac {
+                line-height: 39px;
+                font-size: 32px;
+                font-weight: bold;
+            }
+
+            &__thin-title {
+                font-weight: lighter;
+            }
+
+            &__title-description {
+                font-size: 20px;
+                margin-top: 24px;
+                line-height: 142%;
+            }
+
+            &__title-description-mac {
+                font-size: 16px;
+                margin-top: 24px;
+                line-height: 142%;
+            }
+
+            &__button {
+                margin: 30px auto 0;
+                padding: 15px 35px;
+                font-size: 16px;
+                color: #3a80ba;
+                border: none;
+                border-radius: 8px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .learn-more {
+        &__content {
+            flex-direction: column;
+            align-items: center;
+
+            &__image-wrap {
+                width: unset;
+                &__picture {
+                    position: relative;
+                    top: -29px;
+                    bottom: 0;
+                    height: 108%;
+                    width: 100%;
+                }
+            }
+            &__description-wrap {
+                &__title {
+                    line-height: 30px;
+                    font-size: 32px;
+                }
+
+                &__title-mac {
+                    font-size: 22px;
+                }
+
+                &__thin-title {
+                    font-weight: lighter;
+                }
+
+                &__title-description {
+                    font-size: 14px;
+                }
+
+                &__title-description-mac {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 1366px) {
+    .learn-more {
+        &__content {
+            &__image-wrap {
+                min-width: 300px;
+            }
+
+            &__description-wrap {
+                &__title {
+                    line-height: 30px;
+                    font-size: 32px;
+                }
+
+                &__title-mac {
+                    font-size: 22px;
+                }
+
+                &__thin-title {
+                    font-weight: lighter;
+                }
+
+                &__title-description {
+                    font-size: 14px;
+                }
+
+                &__title-description-mac {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
