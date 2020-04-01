@@ -15,6 +15,9 @@
         "prettier": "^2.0.2"
     },
     "scripts": {
+        "createdb-and-start-server": "cd server && npm i && npm run db && npm run start",
+        "start-server": "cd server && npm ru nstart",
+        "start-client": "cd client && npm i && npm start",
         "lint": "eslint */**/*.js --quiet --fix"
     },
     "author": "",
