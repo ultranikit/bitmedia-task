@@ -1,0 +1,139 @@
+.table-name {
+    margin-bottom: 20px;
+    font-size: 32px;
+    line-height: 39px;
+    font-weight: bold;
+}
+
+.users-table {
+    margin-bottom: 20px;
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;
+    background: #3a80ba;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+}
+
+.user-table-total-clicks,
+.user-table-total-views {
+    text-align: center;
+}
+.user-table-thead {
+    color: #fff;
+    line-height: 20px;
+}
+
+.user-head {
+    vertical-align: middle;
+    padding: 15px 25px;
+    border-right: 1px solid white;
+}
+.user-item-info {
+    padding: 8px 25px;
+    border-right: 1px solid white;
+}
+
+.user-item:nth-child(odd) {
+    background: #fbfbfb;
+}
+.user-item:nth-child(even) {
+    background: #f1f1f1;
+}
+
+// Pagination
+.nav-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin: 20px auto;
+    flex-wrap: wrap;
+}
+
+.pagination-item {
+    display: block;
+    padding: 15px;
+    background: #3a80ba;
+    margin: 10px;
+    border-radius: 8px;
+    color: #fff;
+}
+
+.pagination-btn {
+    display: flex;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 8px;
+    transition: 0.5s;
+}
+
+.pagination-btn:hover .pagination-icon {
+    border-color: #fff;
+}
+
+.pagination-btn:hover {
+    background: #3a80ba;
+}
+
+.pagination-icon {
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 10px;
+    transition: 0.5s;
+}
+
+.pagination-icon-right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    margin-right: 10px;
+}
+
+.pagination-icon-left {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    margin-left: 10px;
+}
+
+@media screen and (max-width: 1366px) {
+    .users-table {
+        overflow-wrap: break-word;
+        table-layout: fixed;
+        text-align: center;
+    }
+    .user-head {
+        font-size: 12px;
+        padding: 10px 0;
+        vertical-align: middle;
+    }
+
+    .user-item-info {
+        font-size: 12px;
+        padding: 10px 0;
+        vertical-align: middle;
+    }
+}
+
+@media screen and (max-width: 980px) {
+    .user-head {
+        font-size: 8px;
+        padding: 3px 0;
+    }
+
+    .user-item-info {
+        font-size: 8px;
+        padding: 3px 0;
+    }
+
+    .pagination-item {
+        margin: 5px;
+        padding: 10px;
+        font-size: 12px;
+    }
+}

@@ -6,16 +6,35 @@ import { SectionCards } from './Sections/SectionCards';
 import { MobileSvg } from './Sections/LearnMoreComponent/Mobile';
 import { MacbookSvg } from './Sections/LearnMoreComponent/Macbook';
 
+export const MainPage = () => {
+    return (
+        <Fragment>
+            <LeaenMoreComponent SectionInfo={firstSection} wave="true" />
+
+            <SectionCards>
+                <SectionTitle options={DealsTitle} />
+                <DealList />
+            </SectionCards>
+
+            <LeaenMoreComponent SectionInfo={SecondSection} macbook={true} />
+
+            <SectionCards background={true}>
+                <SectionTitle options={OfferTitle} />
+                <OfferList />
+            </SectionCards>
+        </Fragment>
+    );
+};
+
 const ViewStatssBtn = {
     title: 'View Stats',
     className: 'learn-more__content__description-wrap__button',
-    onClick: () => console.log('view'),
+    link: '/users',
 };
 
 const LearnMoreBtn = {
     title: 'Learn more',
     className: 'learn-more__content__description-wrap__button',
-    onClick: () => console.log('learn'),
 };
 
 const firstSection = {
@@ -47,24 +66,4 @@ const OfferTitle = {
     title: 'Afforadble Pricing and Packages ',
     thinTitle: { end: 'choose your best one' },
     description: 'Monotonectally grow strategic process improvements vis-a-vis integrated resources.',
-};
-
-export const MainPage = () => {
-    return (
-        <Fragment>
-            <LeaenMoreComponent SectionInfo={firstSection} wave="true" />
-
-            <SectionCards>
-                <SectionTitle options={DealsTitle} />
-                <DealList />
-            </SectionCards>
-
-            <LeaenMoreComponent SectionInfo={SecondSection} macbook={true} />
-
-            <SectionCards background={true}>
-                <SectionTitle options={OfferTitle} />
-                <OfferList />
-            </SectionCards>
-        </Fragment>
-    );
 };

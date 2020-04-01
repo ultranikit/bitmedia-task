@@ -1,9 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-export const Button = ({ options: { className, title, onClick } }) => {
+export const Button = ({ options: { className, title, link = '/' } }) => {
     return (
-        <button style={{ display: 'block' }} className={className} onClick={onClick}>
+        <Link to={link} style={{ display: 'inline-block' }} className={className}>
             {title}
-        </button>
+        </Link>
     );
 };

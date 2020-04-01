@@ -6,3 +6,4 @@ export { OfferComponent } from './OfferComponent';
 export { DealList } from './DealList';
 export { OfferList } from './OfferList';
 export { MainPage } from './MainPage';
+export { UsersPage } from './UsersPage';

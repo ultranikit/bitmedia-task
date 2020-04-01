@@ -9,5 +9,12 @@
         "dev": "nodemon server.js"
     },
     "author": "",
-    "license": "ISC"
+    "license": "ISC",
+    "devDependencies": {
+        "express": "^4.17.1",
+        "nodemon": "^2.0.2"
+    },
+    "dependencies": {
+        "sqlite3": "^4.1.1"
+    }
 }

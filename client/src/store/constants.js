@@ -1,0 +1,7 @@
+//contacts
+export const GET_USERS = 'GET_USERS';
+export const GET_USERS_STATISTIC = 'GET_USERS_STATISTIC';
+export const SET_USERS = 'SET_USERS';
+export const SET_USERS_STATISTIC = 'SET_USERS_STATISTIC';
+
+export const UPDATE_USERS_STATS = 'UPDATE_USERS_STATS';

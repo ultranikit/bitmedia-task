@@ -6,7 +6,7 @@ export const DealComponent = ({ dealInfo }) => {
     return (
         <div className="deal">
             <div className="deal__image-wrap">
-                <img classname="deal__image-wrap__image" src={image} alt="" />
+                <img className="deal__image-wrap__image" src={image} alt="" />
             </div>
             <h3 className="deal__title">{title}</h3>
             <p className="deal__description">{description}</p>
