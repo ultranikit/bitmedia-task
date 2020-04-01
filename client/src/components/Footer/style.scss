@@ -1,0 +1,27 @@
+.footer {
+    padding: 30px 0;
+    background: linear-gradient(95.82deg, #255d8b 1.6%, #3a80ba 96.44%);
+}
+.footer-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer-reserved {
+    color: #fff;
+}
+.footer-copyright {
+    color: #fff;
+}
+
+@media screen and (max-width: 867px) {
+    .footer-bar {
+        flex-direction: column;
+    }
+
+    .footer-reserved,
+    .footer-copyright {
+        margin-top: 20px;
+    }
+}

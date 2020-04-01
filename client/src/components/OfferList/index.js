@@ -2,6 +2,16 @@ import React from 'react';
 import './style.scss';
 import { OfferComponent, Button } from '../';
 
+export const OfferList = () => {
+    return (
+        <div className="offer-container">
+            {offers.map((item, index) => (
+                <OfferComponent key={index} offerInfo={item} />
+            ))}
+        </div>
+    );
+};
+
 const options = {
     title: 'Purchase now',
     className: 'offer__button',
@@ -34,13 +44,3 @@ const offers = [
         button: <Button options={options} />,
     },
 ];
-
-export const OfferList = () => {
-    return (
-        <div className="offer-container">
-            {offers.map((item, index) => (
-                <OfferComponent key={index} offerInfo={item} />
-            ))}
-        </div>
-    );
-};

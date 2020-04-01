@@ -4,7 +4,6 @@ import * as action_type from './constants.js';
 const initialState = {
     usersList: [],
     usersStatisticList: [],
-    paginationPage: 1,
 };
 
 function contactsReducer(state = initialState, action) {

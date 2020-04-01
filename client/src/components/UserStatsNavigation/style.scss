@@ -1,0 +1,12 @@
+.user-stats-nav {
+    margin-top: 15px;
+}
+
+.user-stat-nav-link {
+    margin-right: 10px;
+    color: #cccccc;
+
+    &__active {
+        color: #3a80ba;
+    }
+}

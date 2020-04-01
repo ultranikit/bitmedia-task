@@ -1,5 +1,5 @@
 .table-name {
-    margin-bottom: 20px;
+    margin: 20px 0;
     font-size: 32px;
     line-height: 39px;
     font-weight: bold;
@@ -11,8 +11,7 @@
     text-align: left;
     border-collapse: collapse;
     background: #3a80ba;
-    border-top-right-radius: 8px;
-    border-top-left-radius: 8px;
+    border-radius: 8px;
 }
 
 .user-table-total-clicks,
@@ -21,7 +20,6 @@
 }
 .user-table-thead {
     color: #fff;
-    line-height: 20px;
 }
 
 .user-head {
@@ -30,8 +28,9 @@
     border-right: 1px solid white;
 }
 .user-item-info {
-    padding: 8px 25px;
+    padding: 16px 25px;
     border-right: 1px solid white;
+    vertical-align: middle;
 }
 
 .user-item:nth-child(odd) {
@@ -39,6 +38,18 @@
 }
 .user-item:nth-child(even) {
     background: #f1f1f1;
+}
+
+.user-item {
+    color: #1a1a1a;
+}
+.user-item {
+    cursor: pointer;
+    transition: 0.5s;
+    &:hover {
+        color: #fff;
+        background: #3a80ba;
+    }
 }
 
 // Pagination
@@ -50,42 +61,44 @@
 .pagination {
     display: flex;
     justify-content: center;
-    margin: 20px auto;
-    flex-wrap: wrap;
+    margin: 20px 5px;
 }
 
 .pagination-item {
     display: block;
     padding: 15px;
-    background: #3a80ba;
+    border: 1.5px solid #e5e5e5;
     margin: 10px;
     border-radius: 8px;
+    color: #000;
+}
+
+.pagination-item-active {
+    background: #3a80ba;
     color: #fff;
+    border-color: #3a80ba;
 }
 
 .pagination-btn {
     display: flex;
-    height: 50px;
+    padding: 15px 0;
     align-items: center;
     justify-content: center;
     border: none;
     border-radius: 8px;
     transition: 0.5s;
+    background: transparent;
 }
 
 .pagination-btn:hover .pagination-icon {
-    border-color: #fff;
-}
-
-.pagination-btn:hover {
-    background: #3a80ba;
+    border-color: #3a80ba;
 }
 
 .pagination-icon {
-    border: solid black;
-    border-width: 0 3px 3px 0;
+    border: solid #f1f1f1;
+    border-width: 0 4px 4px 0;
     display: inline-block;
-    padding: 10px;
+    padding: 7px;
     transition: 0.5s;
 }
 
@@ -104,36 +117,47 @@
 @media screen and (max-width: 1366px) {
     .users-table {
         overflow-wrap: break-word;
-        table-layout: fixed;
-        text-align: center;
     }
     .user-head {
+        line-height: 18px;
         font-size: 12px;
-        padding: 10px 0;
-        vertical-align: middle;
+        padding: 5px 10px;
     }
 
     .user-item-info {
         font-size: 12px;
-        padding: 10px 0;
-        vertical-align: middle;
+        padding: 10px;
     }
 }
 
 @media screen and (max-width: 980px) {
     .user-head {
         font-size: 8px;
-        padding: 3px 0;
     }
 
     .user-item-info {
         font-size: 8px;
-        padding: 3px 0;
+        padding: 3px 5px;
     }
 
+    .pagination-icon {
+        padding: 5px;
+    }
     .pagination-item {
         margin: 5px;
         padding: 10px;
         font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .users-table {
+        table-layout: fixed;
+    }
+
+    .user-head {
+        font-size: 5px;
+        padding: 7px;
+        line-height: 5px;
     }
 }

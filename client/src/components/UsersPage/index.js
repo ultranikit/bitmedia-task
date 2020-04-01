@@ -2,6 +2,7 @@ import React, { useState, useEffect, Fragment } from 'react';
 import { connect } from 'react-redux';
 import { getUsers, getUsersStatistic } from '../../store';
 import { UserList } from './UserList';
+import { UserStatsNavigation } from '../';
 import { Pagination } from './Pagination';
 import './style.scss';
 
@@ -43,21 +44,26 @@ export const UsersPage = connect(
         const lastPage = Math.ceil(usersList.length / usersPerPage);
         if (currentPage !== lastPage) setCurrentPage(currentPage + 1);
     };
+
     return (
         <div className="container">
-            <h1 className="table-name">Users statistics</h1>
-            {usersList && usersStatisticList.length ? (
-                <Fragment>
-                    <UserList usersList={currentUsers} usersStatisticList={usersStatisticList} />
-                    <Pagination
-                        usersPerPage={usersPerPage}
-                        totalUsers={usersList.length}
-                        paginate={paginate}
-                        paginateBack={paginateBack}
-                        paginateForward={paginateForward}
-                    />
-                </Fragment>
-            ) : null}
+            <div className="users-wrapper">
+                <UserStatsNavigation />
+                <h1 className="table-name">Users statistics</h1>
+                {usersList && usersStatisticList.length ? (
+                    <Fragment>
+                        <UserList usersList={currentUsers} usersStatisticList={usersStatisticList} />
+                        <Pagination
+                            usersPerPage={usersPerPage}
+                            totalUsers={usersList.length}
+                            paginate={paginate}
+                            paginateBack={paginateBack}
+                            paginateForward={paginateForward}
+                            currentPage={currentPage}
+                        />
+                    </Fragment>
+                ) : null}
+            </div>
         </div>
     );
 });

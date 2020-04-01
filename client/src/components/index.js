@@ -7,3 +7,7 @@ export { DealList } from './DealList';
 export { OfferList } from './OfferList';
 export { MainPage } from './MainPage';
 export { UsersPage } from './UsersPage';
+export { UserDetails } from './UserDetails';
+export { Subscribe } from './Subscribe';
+export { UserStatsNavigation } from './UserStatsNavigation';
+export { Footer } from './Footer';

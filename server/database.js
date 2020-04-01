@@ -6,6 +6,10 @@ const fs = require('fs');
 const usersFile = 'users.json';
 const usersStatisticFile = 'users_statistic.json';
 
+//tables name
+const usersTable = 'users_list';
+const usersStatisticTable = 'users_stats';
+
 const getDataFromJson = (filename) => {
     const data = fs.readFileSync(filename);
     return JSON.parse(data);
@@ -20,16 +24,15 @@ const generateValues = async (tableName, array) => {
         const values = Object.values(item)
             .map((item) => `"${item}"`)
             .join(', ');
-        // console.log(values);
         db.run(`INSERT INTO ${tableName} VALUES (${values})`);
     });
 };
+
 const generateKeys = async (tableName, array) => {
     const arrayElememnt = array.slice(0, 1)[0];
     const keys = Object.keys(arrayElememnt)
         .map((item) => `${item} TEXT`)
         .join(', ');
-    // console.log(keys);
     console.log('table success created');
 
     db.run(`CREATE TABLE ${tableName} (${keys})`);
@@ -37,24 +40,19 @@ const generateKeys = async (tableName, array) => {
 
 const checkTable = (tableName, tableData) => {
     db.serialize(() => {
-        //crate new database table
-        // db.run('DROP TABLE users_list', (err) => {
-        //     // if table not exists , create table and insert data from file.json
-        //     if (err) {
-        //         return console.log(err);
-        //     } else {
-        //         console.log('table already exists, deleting...');
-        //     }
-        // });
-
+        db.run(`DROP TABLE ${tableName}`, (err) => {
+            // if table not exists , create table and insert data from file.json
+            if (err) {
+                return console.log(err);
+            } else {
+                console.log('table already exists, deleting...');
+            }
+        });
+        // create new database table
         generateKeys(tableName, tableData);
         generateValues(tableName, tableData);
-        // db.run(`INSERT INTO users_list VALUES (1, 'texterdf','text','asd','eqw', '66.4545.45')`);
     });
 };
-
-const usersTable = 'users_list';
-const usersStatisticTable = 'users_stats';
 
 checkTable(usersTable, usersList);
 checkTable(usersStatisticTable, usersStatistic);

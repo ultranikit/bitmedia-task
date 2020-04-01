@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import { LeaenMoreComponent } from './Sections/LearnMoreComponent';
-import { Button, DealList, OfferList } from '../';
+import { Button, DealList, OfferList, Subscribe } from '../';
 import { SectionTitle } from './Sections/SectionTitle';
 import { SectionCards } from './Sections/SectionCards';
 import { MobileSvg } from './Sections/LearnMoreComponent/Mobile';
@@ -22,6 +22,7 @@ export const MainPage = () => {
                 <SectionTitle options={OfferTitle} />
                 <OfferList />
             </SectionCards>
+            <Subscribe />
         </Fragment>
     );
 };

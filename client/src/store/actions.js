@@ -3,6 +3,7 @@ import { take, put, all } from 'redux-saga/effects';
 
 import axios from 'axios';
 
+const baseUrl = process.env.PUBLIC_URL;
 // actions
 
 // users
@@ -23,7 +24,7 @@ export const updateUser = (payload) => ({
 function* getUsersSaga() {
     while (true) {
         yield take(action_type.GET_USERS);
-        const response = yield axios.get('api/users');
+        const response = yield axios.get(`${baseUrl}/api/users`);
 
         yield put({
             type: action_type.SET_USERS,
@@ -35,7 +36,7 @@ function* getUsersSaga() {
 function* getUsersStatisticSaga() {
     while (true) {
         yield take(action_type.GET_USERS_STATISTIC);
-        const response = yield axios.get('api/users_statistic');
+        const response = yield axios.get(`${baseUrl}/api/users_statistic`);
 
         yield put({
             type: action_type.SET_USERS_STATISTIC,
