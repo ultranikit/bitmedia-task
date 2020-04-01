@@ -4,7 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
-### `run databease`
+### `run database`
 
 -   Enter server - cd server
 -   Install modules - 'npm install'
